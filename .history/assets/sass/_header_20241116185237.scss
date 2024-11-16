@@ -1,0 +1,544 @@
+.navbar_bottom > div {
+  @include flex(center, space-between, 0);
+  padding-top: 5px;
+}
+.navbar_bottom {
+  height: 55px;
+  background-color: $color-red;
+
+  &_left {
+    @include flex(center, flex-start, 10px);
+
+    button {
+      background-color: transparent;
+      padding: 5px 8px;
+      border-radius: 8px;
+      color: $color-white;
+      border: 2px solid $color-white;
+      font-size: 16px;
+      transition: 0.5s;
+    }
+    button:nth-of-type(3),
+    button:nth-of-type(1) {
+      background-color: $color-white;
+      color: $color-red;
+    }
+    button:nth-of-type(3):hover {
+      background-color: transparent;
+      color: $color-white;
+      cursor: pointer;
+    }
+    button:nth-of-type(2):hover {
+      background-color: $color-white;
+      color: $color-red;
+      cursor: pointer;
+    }
+    button:nth-of-type(1):hover {
+      background-color: transparent;
+      color: $color-white;
+      cursor: pointer;
+    }
+    a {
+      font-size: 16px;
+      color: $color-white;
+    }
+    a:hover {
+      color: $color-other;
+      transition: 0.5s;
+    }
+  }
+  &_right {
+    @include flex(center, flex-start, 10px);
+
+    &_ {
+      @include flex(center, flex-start, 10px);
+
+      a {
+        font-size: 20px;
+        color: $color-white;
+        font-weight: 500;
+      }
+
+      a:hover {
+        color: $color-other;
+        transition: 0.5s;
+      }
+
+      button {
+        background-color: transparent;
+        padding: 5px 8px;
+        border-radius: 8px;
+        color: $color-white;
+        border: 2px solid $color-white;
+        font-size: 16px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: $color-white;
+        color: $color-red;
+        cursor: pointer;
+      }
+    }
+
+    &_tr {
+      border-left: 1px solid $color-other;
+      border-right: 1px solid $color-other;
+      height: 45px;
+      @include flex(center, center, 10px);
+      padding: 0 10px;
+
+      button {
+        font-size: 15px;
+        color: $color-other;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      button:hover {
+        color: $color-white;
+      }
+    }
+  }
+}
+.navbar_search > div {
+  @include flex(center, space-between, 0);
+  padding: 20px 0;
+}
+.navbar_search {
+  img {
+    width: 100px;
+  }
+
+  &_ {
+    width: 55%;
+    @include flex(center, flex-start, 5%);
+
+    button {
+      width: 150px;
+      height: 40px;
+      border: 2px solid $color-black;
+      border-radius: 8px;
+      background-color: transparent;
+      color: $color-black;
+      @include flex(center, space-between, 0px);
+      padding: 0 20px;
+
+      i {
+        font-size: 20px;
+      }
+      p {
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+
+    button:hover {
+      color: $color-red;
+      border: 2px solid $color-red;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    &input {
+      width: 90%;
+      height: 40px;
+      border-radius: 8px;
+      border: none;
+      background-color: #f2f2f2;
+      padding: 0 5px 0 20px;
+      @include flex(center, space-between, 0);
+
+      i {
+        width: 60px;
+        height: 35px;
+        background-color: $color-red;
+        border-radius: 8px;
+        @include flex(center, center, 0);
+        color: $color-white;
+      }
+
+      input {
+        width: 70%;
+        color: $color-black;
+        font-size: 16px;
+        outline: 0;
+        outline-offset: 0;
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &_icon {
+    @include grid(1fr, 5px);
+    justify-items: center;
+
+    i {
+      font-size: 20px;
+      color: $color-black;
+    }
+    p {
+      font-size: 16px;
+      color: $color-black;
+      font-weight: 500;
+    }
+  }
+  &_icon:hover {
+    cursor: pointer;
+    transition: 0.5s;
+
+    i {
+      color: $color-red;
+    }
+    p {
+      color: $color-red;
+    }
+  }
+}
+.phone {
+  display: none;
+}
+.translator {
+  display: none;
+}
+.navbar_showcase_bottom > div {
+  @include grid(repeat(12, 1fr), 20px);
+}
+.navbar_showcase_bottom {
+  &_item {
+    text-align: center;
+
+    p {
+      font-size: 15px;
+      color: $color-black;
+      padding-top: 5px;
+    }
+  }
+}
+
+// showcase
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper2 {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide2 {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide2 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar_showcase > div {
+  width: 95%;
+  box-sizing: border-box;
+  @include grid(73% 25%, 2%);
+  padding-top: 20px;
+}
+
+.navbar_showcase {
+  width: 100%;
+
+  &_right {
+    position: relative;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 2px solid $color-red;
+    @include grid(auto, 10px);
+
+    &_left {
+      h2 {
+        font-size: 15px;
+        color: $color-black;
+        padding-bottom: 20px;
+      }
+    }
+    &_ {
+      h1 {
+        font-size: 15px;
+        color: $color-black;
+      }
+      &price {
+        @include flex(center, space-between, 0);
+
+        h3 {
+          font-size: 14px;
+          color: $color-red;
+        }
+        h4 {
+          font-size: 13px;
+          color: $color-black;
+          text-decoration: line-through;
+        }
+      }
+      h5 {
+        font-size: 15px;
+        background-color: $color-gold;
+        color: $color-black;
+        width: 180px;
+        height: 25px;
+        border-radius: 3px;
+        @include flex(center, center, 0);
+        padding-bottom: 3px;
+      }
+      h6 {
+        background-color: $color-red;
+        color: $color-white;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        font-size: 16px;
+        padding: 3px 4px;
+        border-radius: 3px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// showcase
+
+@media (max-width: 1024px) {
+  .navbar_showcase_bottom > div {
+    @include grid(repeat(6, 1fr), 20px);
+  }
+  .navbar_showcase > div {
+    @include grid(1fr, 20px);
+  }
+  .navbar_showcase {
+    &_right {
+      @include flex(center, flex-start, 20px);
+
+      &_left {
+        h2 {
+          font-size: 20px;
+        }
+      }
+      &_ {
+        @include grid(1fr, 10px);
+        h1 {
+          font-size: 23px;
+        }
+        &price {
+          @include grid(1fr, 5px);
+
+          h4 {
+            font-size: 16px;
+            order: 1;
+          }
+          h3 {
+            font-size: 20px;
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+  .navbar_bottom {
+    display: none;
+  }
+  .phone {
+    display: block;
+    grid-column: 1/2;
+    font-size: 16px;
+    color: $color-black;
+  }
+  .translator {
+    display: block;
+  }
+  .navbar_search > div {
+    @include grid(20px 20px 1fr 100px 1fr 20px 20px, 0);
+    justify-items: center;
+  }
+  .navbar_search {
+    img {
+      grid-column: 4/5;
+    }
+
+    h2 {
+      grid-column: 7/8;
+      font-size: 14px;
+      color: $color-black;
+    }
+
+    &_icon {
+      display: none;
+    }
+
+    &_ {
+      width: 100%;
+      grid-column: 1/8;
+      padding-top: 20px;
+
+      &input {
+        width: 100%;
+        @include flex(center, flex-start, 5px);
+        padding: 0 5px;
+
+        input {
+          order: 2;
+          width: 90%;
+        }
+        i {
+          order: 1;
+          width: 20px;
+          height: 20px;
+          font-size: 14px;
+          background-color: transparent;
+          color: $color-black;
+        }
+      }
+      button {
+        width: 40px;
+        height: 40px;
+        @include flex(center, center, 0);
+
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar_showcase_bottom > div {
+    @include grid(1fr 1fr 1fr 1fr, 20px);
+  }
+}
+
+@media (max-width: 500px) {
+  .swiper-button-next,
+  .swiper-button-prev,
+  .swiper-pagination {
+    display: none;
+  }
+  .navbar_showcase {
+    &_right {
+      padding: 8px 10px;
+
+      &_left {
+        h2 {
+          font-size: 13px;
+        }
+      }
+      &_ {
+        @include grid(1fr, 5px);
+        h1 {
+          font-size: 14px;
+        }
+
+        &price {
+          h4 {
+            font-size: 13px;
+          }
+          h3 {
+            font-size: 15px;
+          }
+        }
+      }
+      h5 {
+        font-size: 15px;
+        width: 160px;
+      }
+      h6 {
+        top: 30px;
+      }
+    }
+  }
+  .navbar_top {
+    display: none;
+  }
+  .navbar_search {
+    height: 30px;
+    margin-bottom: 20%;
+
+    &_ {
+      height: 30px;
+
+      &input {
+        height: 30px;
+
+        input {
+          font-size: 12px;
+          height: 30px;
+        }
+      }
+
+      button {
+        width: 40px;
+        height: 30px;
+        padding: 0 0;
+
+        i {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .navbar_showcase_bottom > div {
+    @include grid(1fr 1fr 1fr, 20px);
+  }
+}
+@media (max-width: 320px) {
+  .navbar_showcase {
+    &_right {
+      @include grid(1fr, 0px);
+      height: 70vh;
+
+      &_left {
+        h2 {
+          font-size: 20px;
+        }
+      }
+
+      h6 {
+        top: 40px;
+      }
+    }
+  }
+}
